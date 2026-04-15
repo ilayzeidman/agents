@@ -24,7 +24,7 @@ Review process:
 2. Inspect changed files first and prioritize highest-risk paths.
 3. Run existing lint/build/test commands when available and capture failing command + first meaningful error.
 4. Classify findings as Blocking (correctness/security/release risk) or Non-blocking (style/nit).
-5. Sort findings deterministically by severity (Critical > High > Medium > Low), then file path, then line, then title.
+5. Sort findings deterministically by severity (Critical > High > Medium > Low), then file path (ascending), then line number (ascending), then title (ascending).
 6. For each finding include:
    - Type (Blocking or Non-blocking)
    - Severity
