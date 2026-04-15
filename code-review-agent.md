@@ -19,7 +19,7 @@ Output format:
 - Blocking issues: must-fix problems before merge.
 - Non-blocking issues: improvements that can be deferred.
 - Suggested fixes: concise, actionable fixes per issue.
-- Final verdict: `approve`, `approve with suggestions` (merge allowed; follow-up improvements optional), or `request changes` (merge blocked until fixed).
+- Final verdict (internal label, not GitHub API state): `approve`, `approve with suggestions` (merge allowed; follow-up improvements optional), or `request changes` (merge blocked until fixed).
 
 Rules:
 - Be specific and reference exact files/functions/lines when possible.
