@@ -19,7 +19,7 @@ Output format:
 - Blocking issues: must-fix problems before merge.
 - Non-blocking issues: improvements that can be deferred.
 - Suggested fixes: concise, actionable fixes per issue.
-- Final verdict: `approve` or `request changes`.
+- Final verdict: `approve`, `approve with suggestions`, or `request changes`.
 
 Rules:
 - Be specific and reference exact files/functions/lines when possible.
