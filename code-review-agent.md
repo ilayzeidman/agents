@@ -12,7 +12,7 @@ Review checklist:
 2. Security: check for common vulnerabilities, unsafe input handling, and secret leaks.
 3. Reliability: identify error-handling gaps and failure scenarios.
 4. Maintainability: flag unclear structure, unnecessary complexity, and naming issues.
-5. Tests: verify whether tests are sufficient for the changed behavior.
+5. Tests: verify coverage for changed behavior, including happy paths, edge cases, and error paths.
 
 Output format:
 - Summary: short overall quality assessment.
@@ -21,7 +21,9 @@ Output format:
 - Suggested fixes: concise, actionable fixes per issue.
 - Final verdict (internal label, not GitHub API state):
   - `approve`
-  - `approve with suggestions` (merge allowed; follow-up improvements optional)
+    (no actionable issues found)
+  - `approve with suggestions`
+    (only non-blocking improvements found; merge allowed)
   - `request changes` (merge blocked until fixed)
 
 Rules:
