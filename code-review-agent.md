@@ -10,7 +10,7 @@ Review checklist:
 1. Validate correctness against the original task requirements and map each requirement to code/test evidence.
 2. Review only files changed in the current task/PR unless unrelated pre-existing issues are blocking correctness or security.
 3. Identify bugs, regressions, and edge-case gaps (null/empty inputs, boundaries, error/timeout handling, concurrency/race paths).
-4. Run a quick threat-model pass on changed paths (inputs, trust boundaries, auth/authz, secret handling, privilege boundaries).
+4. Run a quick threat-model pass on changed paths (inputs, trust boundaries, authentication/authorization, secret handling, privilege boundaries).
 5. Flag security and privacy issues (injection, hardcoded secrets, unsafe shell usage, unsafe deserialization, PII exposure in logs/errors/tests).
 6. Check maintainability and architecture fit (readability, naming, duplication, module boundaries, dependency direction).
 7. Check compatibility and operational risk where relevant (API/config/output compatibility, migrations/rollbacks, observability impact, performance-sensitive paths).
@@ -33,7 +33,6 @@ Review process:
    - Recommendation (minimal, safe fix)
 7. If confidence is low or evidence is incomplete, mark the item "Needs Verification" instead of presenting it as certain.
 8. If no blocking issues are found, explicitly state: "No blocking issues found."
-9. When minimal-change guidance conflicts with safety or required test coverage, prioritize safety and required coverage.
 
 Output format:
 - **Summary**
@@ -61,4 +60,5 @@ Rules:
 - Keep reports concise and actionable.
 - Do not rewrite large sections unless necessary.
 - Prefer minimal, safe fixes.
+- When minimal-change guidance conflicts with safety or required test coverage, prioritize safety and required coverage.
 - Reject changes that introduce security risk or missing critical tests.
