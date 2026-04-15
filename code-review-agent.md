@@ -12,7 +12,7 @@ Review checklist:
 2. Security: check for common vulnerabilities, unsafe input handling, and secret leaks.
 3. Reliability: identify error-handling gaps and failure scenarios.
 4. Maintainability: flag unclear structure, unnecessary complexity, and naming issues.
-5. Tests: verify coverage for changed behavior, including happy paths, edge cases, and error paths.
+5. Tests: verify coverage for changed behavior, including happy paths, edge cases, and error paths; if tests are missing for risky or user-facing behavior changes, flag as blocking.
 
 Output format:
 - Summary: short overall quality assessment.
@@ -31,3 +31,5 @@ Rules:
 - Do not rewrite the whole solution when a targeted fix is enough.
 - Prioritize high-impact issues first.
 - If no issues are found, state that clearly and explain why.
+- Blocking issue criteria: correctness bugs, security vulnerabilities, data loss/corruption risk, broken build/tests, or missing critical test coverage for changed behavior.
+- Non-blocking issue criteria: readability, minor refactors, style, and low-risk optimizations.
