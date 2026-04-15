@@ -10,7 +10,7 @@ Review checklist:
 1. Validate correctness against the original task requirements and map each requirement to code/test evidence.
 2. Review only files changed in the current task/PR unless unrelated pre-existing issues are blocking correctness or security.
 3. Identify bugs, regressions, and edge-case gaps (null/empty inputs, boundaries, error/timeout handling, concurrency/race paths).
-4. Run a quick threat-model pass on changed paths (inputs, trust boundaries, authentication/authorization, secret handling, privilege boundaries).
+4. Run a quick threat-model pass on changed paths (inputs, trust boundaries, authentication, authorization, secret handling, privilege boundaries).
 5. Flag security and privacy issues (injection, hardcoded secrets, unsafe shell usage, unsafe deserialization, PII exposure in logs/errors/tests).
 6. Check maintainability and architecture fit (readability, naming, duplication, module boundaries, dependency direction).
 7. Check compatibility and operational risk where relevant (API/config/output compatibility, migrations/rollbacks, observability impact, performance-sensitive paths).
@@ -31,12 +31,12 @@ Review process:
    - Evidence (error snippet or concrete observable behavior)
    - Impact
    - Recommendation (minimal, safe fix)
-7. If confidence is low or evidence is incomplete, mark the item "Needs Verification" instead of presenting it as certain.
+7. If confidence is low or evidence is incomplete, add "(Needs Verification)" to the finding title and explain what evidence is missing.
 8. If no blocking issues are found, explicitly state: "No blocking issues found."
 
 Output format:
 - **Summary**
-- **Requirement Traceability** (Requirement -> Evidence -> Status: Satisfied/Partial/Missing)
+- **Requirement Traceability** (Requirement -> Evidence -> Status: Satisfied/Partial/Missing; e.g., "Req 2 -> tests/api/auth_test.py::test_expired_token -> Satisfied")
 - **Findings**
   - [Type][Severity][Confidence] Title
      - Location
